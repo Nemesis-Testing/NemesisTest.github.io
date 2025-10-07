@@ -9,8 +9,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- BELLE METHOD NOTIFICATION SYSTEM CSS -->
+    <style type="text/css">:where(html[dir="ltr"]),:where([data-sonner-toaster][dir="ltr"]){--toast-icon-margin-start: -3px;--toast-icon-margin-end: 4px;--toast-svg-margin-start: -1px;--toast-svg-margin-end: 0px;--toast-button-margin-start: auto;--toast-button-margin-end: 0;--toast-close-button-start: 0;--toast-close-button-end: unset;--toast-close-button-transform: translate(-35%, -35%)}:where(html[dir="rtl"]),:where([data-sonner-toaster][dir="rtl"]){--toast-icon-margin-start: 4px;--toast-icon-margin-end: -3px;--toast-svg-margin-start: 0px;--toast-svg-margin-end: -1px;--toast-button-margin-start: 0;--toast-button-margin-end: auto;--toast-close-button-start: unset;--toast-close-button-end: 0;--toast-close-button-transform: translate(35%, -35%)}:where([data-sonner-toaster]){position:fixed;width:var(--width);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--gray1: hsl(0, 0%, 99%);--gray2: hsl(0, 0%, 97.3%);--gray3: hsl(0, 0%, 95.1%);--gray4: hsl(0, 0%, 93%);--gray5: hsl(0, 0%, 90.9%);--gray6: hsl(0, 0%, 88.7%);--gray7: hsl(0, 0%, 85.8%);--gray8: hsl(0, 0%, 78%);--gray9: hsl(0, 0%, 56.1%);--gray10: hsl(0, 0%, 52.3%);--gray11: hsl(0, 0%, 43.5%);--gray12: hsl(0, 0%, 9%);--border-radius: 8px;box-sizing:border-box;padding:0;margin:0;list-style:none;outline:none;z-index:999999999;transition:transform .4s ease}:where([data-sonner-toaster][data-lifted="true"]){transform:translateY(-10px)}@media (hover: none) and (pointer: coarse){:where([data-sonner-toaster][data-lifted="true"]){transform:none}}:where([data-sonner-toaster][data-x-position="right"]){right:var(--offset-right)}:where([data-sonner-toaster][data-x-position="left"]){left:var(--offset-left)}:where([data-sonner-toaster][data-x-position="center"]){left:50%;transform:translate(-50%)}:where([data-sonner-toaster][data-y-position="top"]){top:var(--offset-top)}:where([data-sonner-toaster][data-y-position="bottom"]){bottom:var(--offset-bottom)}:where([data-sonner-toast]){--y: translateY(100%);--lift-amount: calc(var(--lift) * var(--gap));z-index:var(--z-index);position:absolute;opacity:0;transform:var(--y);filter:blur(0);touch-action:none;transition:transform .4s,opacity .4s,height .4s,box-shadow .2s;box-sizing:border-box;outline:none;overflow-wrap:anywhere}:where([data-sonner-toast][data-styled="true"]){padding:16px;background:var(--normal-bg);border:1px solid var(--normal-border);color:var(--normal-text);border-radius:var(--border-radius);box-shadow:0 4px 12px #0000001a;width:var(--width);font-size:13px;display:flex;align-items:center;gap:6px}:where([data-sonner-toast]:focus-visible){box-shadow:0 4px 12px #0000001a,0 0 0 2px #0003}:where([data-sonner-toast][data-y-position="top"]){top:0;--y: translateY(-100%);--lift: 1;--lift-amount: calc(1 * var(--gap))}:where([data-sonner-toast][data-y-position="bottom"]){bottom:0;--y: translateY(100%);--lift: -1;--lift-amount: calc(var(--lift) * var(--gap))}:where([data-sonner-toast]) :where([data-description]){font-weight:400;line-height:1.4;color:inherit}:where([data-sonner-toast]) :where([data-title]){font-weight:500;line-height:1.5;color:inherit}:where([data-sonner-toast]) :where([data-icon]){display:flex;height:16px;width:16px;position:relative;justify-content:flex-start;align-items:center;flex-shrink:0;margin-left:var(--toast-icon-margin-start);margin-right:var(--toast-icon-margin-end)}:where([data-sonner-toast][data-promise="true"]) :where([data-icon])>svg{opacity:0;transform:scale(.8);transform-origin:center;animation:sonner-fade-in .3s ease forwards}:where([data-sonner-toast]) :where([data-icon])>*{flex-shrink:0}:where([data-sonner-toast]) :where([data-icon]) svg{margin-left:var(--toast-svg-margin-start);margin-right:var(--toast-svg-margin-end)}:where([data-sonner-toast]) :where([data-content]){display:flex;flex-direction:column;gap:2px}[data-sonner-toast][data-styled=true] [data-button]{border-radius:4px;padding-left:8px;padding-right:8px;height:24px;font-size:12px;color:var(--normal-bg);background:var(--normal-text);margin-left:var(--toast-button-margin-start);margin-right:var(--toast-button-margin-end);border:none;cursor:pointer;outline:none;display:flex;align-items:center;flex-shrink:0;transition:opacity .4s,box-shadow .2s}:where([data-sonner-toast]) :where([data-button]):focus-visible{box-shadow:0 0 0 2px #0006}:where([data-sonner-toast]) :where([data-button]):first-of-type{margin-left:var(--toast-button-margin-start);margin-right:var(--toast-button-margin-end)}:where([data-sonner-toast]) :where([data-cancel]){color:var(--normal-text);background:rgba(0,0,0,.08)}:where([data-sonner-toast][data-theme="dark"]) :where([data-cancel]){background:rgba(255,255,255,.3)}:where([data-sonner-toast]) :where([data-close-button]){position:absolute;left:var(--toast-close-button-start);right:var(--toast-close-button-end);top:0;height:20px;width:20px;display:flex;justify-content:center;align-items:center;padding:0;color:var(--gray12);border:1px solid var(--gray4);transform:var(--toast-close-button-transform);border-radius:50%;cursor:pointer;z-index:1;transition:opacity .1s,background .2s,border-color .2s}[data-sonner-toast] [data-close-button]{background:var(--gray1)}:where([data-sonner-toast]) :where([data-close-button]):focus-visible{box-shadow:0 4px 12px #0000001a,0 0 0 2px #0003}:where([data-sonner-toast]) :where([data-disabled="true"]){cursor:not-allowed}:where([data-sonner-toast]):hover :where([data-close-button]):hover{background:var(--gray2);border-color:var(--gray5)}:where([data-sonner-toast][data-swiping="true"]):before{content:"";position:absolute;left:-50%;right:-50%;height:100%;z-index:-1}:where([data-sonner-toast][data-y-position="top"][data-swiping="true"]):before{bottom:50%;transform:scaleY(3) translateY(50%)}:where([data-sonner-toast][data-y-position="bottom"][data-swiping="true"]):before{top:50%;transform:scaleY(3) translateY(-50%)}:where([data-sonner-toast][data-swiping="false"][data-removed="true"]):before{content:"";position:absolute;inset:0;transform:scaleY(2)}:where([data-sonner-toast]):after{content:"";position:absolute;left:0;height:calc(var(--gap) + 1px);bottom:100%;width:100%}:where([data-sonner-toast][data-mounted="true"]){--y: translateY(0);opacity:1}:where([data-sonner-toast][data-expanded="false"][data-front="false"]){--scale: var(--toasts-before) * .05 + 1;--y: translateY(calc(var(--lift-amount) * var(--toasts-before))) scale(calc(-1 * var(--scale)));height:var(--front-toast-height)}:where([data-sonner-toast])>*{transition:opacity .4s}:where([data-sonner-toast][data-expanded="false"][data-front="false"][data-styled="true"])>*{opacity:0}:where([data-sonner-toast][data-visible="false"]){opacity:0;pointer-events:none}:where([data-sonner-toast][data-mounted="true"][data-expanded="true"]){--y: translateY(calc(var(--lift) * var(--offset)));height:var(--initial-height)}:where([data-sonner-toast][data-removed="true"][data-front="true"][data-swipe-out="false"]){--y: translateY(calc(var(--lift) * -100%));opacity:0}:where([data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="true"]){--y: translateY(calc(var(--lift) * var(--offset) + var(--lift) * -100%));opacity:0}:where([data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="false"]){--y: translateY(40%);opacity:0;transition:transform .5s,opacity .2s}:where([data-sonner-toast][data-removed="true"][data-front="false"]):before{height:calc(var(--initial-height) + 20%)}[data-sonner-toast][data-swiping=true]{transform:var(--y) translateY(var(--swipe-amount-y, 0px)) translate(var(--swipe-amount-x, 0px));transition:none}[data-sonner-toast][data-swiped=true]{user-select:none}[data-sonner-toast][data-swipe-out=true][data-y-position=bottom],[data-sonner-toast][data-swipe-out=true][data-y-position=top]{animation-duration:.2s;animation-timing-function:ease-out;animation-fill-mode:forwards}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=left]{animation-name:swipe-out-left}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=right]{animation-name:swipe-out-right}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=up]{animation-name:swipe-out-up}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=down]{animation-name:swipe-out-down}@keyframes swipe-out-left{0%{transform:var(--y) translate(var(--swipe-amount-x));opacity:1}to{transform:var(--y) translate(calc(var(--swipe-amount-x) - 100%));opacity:0}}@keyframes swipe-out-right{0%{transform:var(--y) translate(var(--swipe-amount-x));opacity:1}to{transform:var(--y) translate(calc(var(--swipe-amount-x) + 100%));opacity:0}}@keyframes swipe-out-up{0%{transform:var(--y) translateY(var(--swipe-amount-y));opacity:1}to{transform:var(--y) translateY(calc(var(--swipe-amount-y) - 100%));opacity:0}}@keyframes swipe-out-down{0%{transform:var(--y) translateY(var(--swipe-amount-y));opacity:1}to{transform:var(--y) translateY(calc(var(--swipe-amount-y) + 100%));opacity:0}}@media (max-width: 600px){[data-sonner-toaster]{position:fixed;right:var(--mobile-offset-right);left:var(--mobile-offset-left);width:100%}[data-sonner-toaster][dir=rtl]{left:calc(var(--mobile-offset-left) * -1)}[data-sonner-toaster] [data-sonner-toast]{left:0;right:0;width:calc(100% - var(--mobile-offset-left) * 2)}[data-sonner-toaster][data-x-position=left]{left:var(--mobile-offset-left)}[data-sonner-toaster][data-y-position=bottom]{bottom:var(--mobile-offset-bottom)}[data-sonner-toaster][data-y-position=top]{top:var(--mobile-offset-top)}[data-sonner-toaster][data-x-position=center]{left:var(--mobile-offset-left);right:var(--mobile-offset-right);transform:none}}[data-sonner-toaster][data-theme=light]{--normal-bg: #fff;--normal-border: var(--gray4);--normal-text: var(--gray12);--success-bg: hsl(143, 85%, 96%);--success-border: hsl(145, 92%, 91%);--success-text: hsl(140, 100%, 27%);--info-bg: hsl(208, 100%, 97%);--info-border: hsl(221, 91%, 91%);--info-text: hsl(210, 92%, 45%);--warning-bg: hsl(49, 100%, 97%);--warning-border: hsl(49, 91%, 91%);--warning-text: hsl(31, 92%, 45%);--error-bg: hsl(359, 100%, 97%);--error-border: hsl(359, 100%, 94%);--error-text: hsl(360, 100%, 45%)}[data-sonner-toaster][data-theme=light] [data-sonner-toast][data-invert=true]{--normal-bg: #000;--normal-border: hsl(0, 0%, 20%);--normal-text: var(--gray1)}[data-sonner-toaster][data-theme=dark] [data-sonner-toast][data-invert=true]{--normal-bg: #fff;--normal-border: var(--gray3);--normal-text: var(--gray12)}[data-sonner-toaster][data-theme=dark]{--normal-bg: #000;--normal-bg-hover: hsl(0, 0%, 12%);--normal-border: hsl(0, 0%, 20%);--normal-border-hover: hsl(0, 0%, 25%);--normal-text: var(--gray1);--success-bg: hsl(150, 100%, 6%);--success-border: hsl(147, 100%, 12%);--success-text: hsl(150, 86%, 65%);--info-bg: hsl(215, 100%, 6%);--info-border: hsl(223, 100%, 12%);--info-text: hsl(216, 87%, 65%);--warning-bg: hsl(64, 100%, 6%);--warning-border: hsl(60, 100%, 12%);--warning-text: hsl(46, 87%, 65%);--error-bg: hsl(358, 76%, 10%);--error-border: hsl(357, 89%, 16%);--error-text: hsl(358, 100%, 81%)}[data-sonner-toaster][data-theme=dark] [data-sonner-toast] [data-close-button]{background:var(--normal-bg);border-color:var(--normal-border);color:var(--normal-text)}[data-sonner-toaster][data-theme=dark] [data-sonner-toast] [data-close-button]:hover{background:var(--normal-bg-hover);border-color:var(--normal-border-hover)}[data-rich-colors=true][data-sonner-toast][data-type=success],[data-rich-colors=true][data-sonner-toast][data-type=success] [data-close-button]{background:var(--success-bg);border-color:var(--success-border);color:var(--success-text)}[data-rich-colors=true][data-sonner-toast][data-type=info],[data-rich-colors=true][data-sonner-toast][data-type=info] [data-close-button]{background:var(--info-bg);border-color:var(--info-border);color:var(--info-text)}[data-rich-colors=true][data-sonner-toast][data-type=warning],[data-rich-colors=true][data-sonner-toast][data-type=warning] [data-close-button]{background:var(--warning-bg);border-color:var(--warning-border);color:var(--warning-text)}[data-rich-colors=true][data-sonner-toast][data-type=error],[data-rich-colors=true][data-sonner-toast][data-type=error] [data-close-button]{background:var(--error-bg);border-color:var(--error-border);color:var(--error-text)}.sonner-loading-wrapper{--size: 16px;height:var(--size);width:var(--size);position:absolute;inset:0;z-index:10}.sonner-loading-wrapper[data-visible=false]{transform-origin:center;animation:sonner-fade-out .2s ease forwards}.sonner-spinner{position:relative;top:50%;left:50%;height:var(--size);width:var(--size)}.sonner-loading-bar{animation:sonner-spin 1.2s linear infinite;background:var(--gray11);border-radius:6px;height:8%;left:-10%;position:absolute;top:-3.9%;width:24%}.sonner-loading-bar:nth-child(1){animation-delay:-1.2s;transform:rotate(.0001deg) translate(146%)}.sonner-loading-bar:nth-child(2){animation-delay:-1.1s;transform:rotate(30deg) translate(146%)}.sonner-loading-bar:nth-child(3){animation-delay:-1s;transform:rotate(60deg) translate(146%)}.sonner-loading-bar:nth-child(4){animation-delay:-.9s;transform:rotate(90deg) translate(146%)}.sonner-loading-bar:nth-child(5){animation-delay:-.8s;transform:rotate(120deg) translate(146%)}.sonner-loading-bar:nth-child(6){animation-delay:-.7s;transform:rotate(150deg) translate(146%)}.sonner-loading-bar:nth-child(7){animation-delay:-.6s;transform:rotate(180deg) translate(146%)}.sonner-loading-bar:nth-child(8){animation-delay:-.5s;transform:rotate(210deg) translate(146%)}.sonner-loading-bar:nth-child(9){animation-delay:-.4s;transform:rotate(240deg) translate(146%)}.sonner-loading-bar:nth-child(10){animation-delay:-.3s;transform:rotate(270deg) translate(146%)}.sonner-loading-bar:nth-child(11){animation-delay:-.2s;transform:rotate(300deg) translate(146%)}.sonner-loading-bar:nth-child(12){animation-delay:-.1s;transform:rotate(330deg) translate(146%)}@keyframes sonner-fade-in{0%{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}@keyframes sonner-fade-out{0%{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(.8)}}@keyframes sonner-spin{0%{opacity:1}to{opacity:.15}}@media (prefers-reduced-motion){[data-sonner-toast],[data-sonner-toast]>*,.sonner-loading-bar{transition:none!important;animation:none!important}}.sonner-loader{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transform-origin:center;transition:opacity .2s,transform .2s}.sonner-loader[data-visible=false]{opacity:0;transform:scale(.8) translate(-50%,-50%)}
+.flex { display: flex; }
+.h-full { height: 100%; }
+.w-full { width: 100%; }
+.w-40 { width: 10rem; }
+.flex-row { flex-direction: row; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: 0.25rem; }
+.p-4 { padding: 1rem; }
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.font-semibold { font-weight: 600; }
+.text-white { color: #fff; }
+.line-clamp-1 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; }
+.line-clamp-2 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.whitespace-pre-wrap { white-space: pre-wrap; }
+.max-w-full { max-width: 100%; }
+.overflow-ellipsis { text-overflow: ellipsis; }
+.first-letter-capitalize { text-transform: capitalize; }
+.text-muted-foreground\/70 { color: rgba(161, 161, 170, 0.7); }
+.text-muted-foreground { color: #a1a1aa; }
+.\!text-muted-foreground { color: #a1a1aa !important; }
+.mt-2 { margin-top: 0.5rem; }
+.inline-flex { display: inline-flex; }
+.items-center { align-items: center; }
+.capitalize { text-transform: capitalize; }
+.mr-1 { margin-right: 0.25rem; }
+.\!lowercase { text-transform: lowercase !important; }
+.relative { position: relative; }
+.gradient-mask-l-70 { 
+    -webkit-mask-image: linear-gradient(to right, transparent, black 70%); 
+    mask-image: linear-gradient(to right, transparent, black 70%);
+}
+.h-8 { height: 2rem; }
+.w-8 { width: 2rem; }
+.object-cover { object-fit: cover; }
+.object-center { object-position: center; }
+[data-sonner-toast] {
+    min-height: 105px !important;
+    height: 105px !important;
+    width: 356px !important;
+}
+[data-sonner-toast][data-styled="true"] {
+    min-height: 105px !important;
+    height: 105px !important;
+    padding: 0 !important;
+}
+</style>
 </head>
 <body>
+    <!-- BELLE METHOD NOTIFICATION SYSTEM -->
+    <section aria-label="Notifications" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false" 
+             data-sonner-toaster="" 
+             data-theme="dark" 
+             data-x-position="left" 
+             data-y-position="bottom"
+             data-rich-colors="true"
+             style="--width: 356px; --offset-left: 24px; --offset-bottom: 24px; --gap: 14px; --mobile-offset-left: 12px; --mobile-offset-bottom: 12px;">
+    </section>
+
     <nav class="navbar">
         <div class="nav-container">
             <ul class="nav-menu">
@@ -279,5 +339,191 @@
 
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- BELLE METHOD NOTIFICATION SYSTEM JAVASCRIPT -->
+    <script>
+        // PURE BELLE METHOD TOAST IMPLEMENTATION - STOLEN FROM SOURCE
+        let toastId = 0;
+        const toasts = [];
+        const container = document.querySelector('[data-sonner-toaster]');
+
+        // Belle Method's exact toast object
+        const toast = {
+            success: (title, options) => showToast(title, 'success', options),
+            error: (title, options) => showToast(title, 'error', options),
+            info: (title, options) => showToast(title, 'info', options),
+            warning: (title, options) => showToast(title, 'warning', options)
+        };
+
+        // Make global like Belle Method
+        window.toast = toast;
+
+        function showToast(title, type = 'success', options = {}) {
+            const id = ++toastId;
+            const toastEl = createToast(id, title, type, options);
+            
+            container.appendChild(toastEl);
+            toasts.push({ id, element: toastEl });
+            
+            updateToastPositions();
+            
+            setTimeout(() => {
+                toastEl.setAttribute('data-mounted', 'true');
+                toastEl.setAttribute('data-visible', 'true');
+                toastEl.setAttribute('data-expanded', 'true');
+            }, 10);
+
+            const duration = options.duration || 6000;
+            setTimeout(() => removeToast(id), duration);
+
+            return id;
+        }
+
+        function createToast(id, title, type, options) {
+            const toastEl = document.createElement('div');
+            toastEl.setAttribute('data-sonner-toast', '');
+            toastEl.setAttribute('data-styled', 'true');
+            toastEl.setAttribute('data-mounted', 'false');
+            toastEl.setAttribute('data-visible', 'false');
+            toastEl.setAttribute('data-expanded', 'false');
+            toastEl.setAttribute('data-front', 'false');
+            toastEl.setAttribute('data-type', type);
+            toastEl.setAttribute('data-y-position', 'bottom');
+            toastEl.style.setProperty('--width', '356px');
+            toastEl.style.setProperty('--initial-height', '105px');
+            toastEl.style.setProperty('--gap', '14px');
+            toastEl.style.setProperty('--front-toast-height', '105px');
+            toastEl.style.width = '356px';
+            toastEl.style.minHeight = '105px';
+            toastEl.style.height = '105px';
+
+            const description = options.description || '';
+            
+            // EXACT BELLE METHOD LAYOUT - STOLEN 1:1 WITH SRCSET (PROPERLY FORMATTED)
+            toastEl.innerHTML = `
+                <div class="flex h-full w-full flex-row justify-between gap-1">
+                    <div class="p-4">
+                        <span class="text-muted-foreground/70 line-clamp-1 whitespace-pre-wrap text-xs">${title}</span>
+                        <span class="line-clamp-2 max-w-full overflow-ellipsis text-sm font-semibold text-white">${options.product || 'AIM'}</span>
+                        <span class="first-letter-capitalize text-muted-foreground/70 line-clamp-1 whitespace-pre-wrap text-xs">${options.time || 'today at 1:09 AM'}</span>
+                        <div class="mt-2 inline-flex items-center">
+                            <div class="!text-muted-foreground line-clamp-1 capitalize">
+                                <span class="mr-1 !lowercase">from</span>${options.location || 'Auckland, New Zealand 🇳🇿'}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-full w-40" style="height: 105px; width: 180px; overflow: hidden; border-radius: 8px;">
+                        <img alt="Coin" 
+                             loading="lazy" 
+                             decoding="async" 
+                             data-nimg="fill" 
+                             class="gradient-mask-l-70" 
+                             sizes="100vw" 
+                             srcset="https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 640w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 750w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 828w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 1080w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 1200w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 1920w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 2048w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 3840w" 
+                             src="https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter" 
+                             style="position: absolute; height: 110%; width: 110%; top: -8px; right: -10px; color: transparent; object-fit: fill;">
+                    </div>
+                </div>
+            `;
+
+            toastEl.addEventListener('click', () => removeToast(id));
+            return toastEl;
+        }
+
+        function updateToastPositions() {
+            toasts.forEach((toastData, index) => {
+                const toast = toastData.element;
+                const reverseIndex = toasts.length - 1 - index;
+                
+                toast.style.setProperty('--z-index', 1000 - reverseIndex);
+                toast.style.setProperty('--offset', reverseIndex * 14 + 'px');
+                toast.setAttribute('data-front', reverseIndex === 0 ? 'true' : 'false');
+                toast.style.setProperty('--toasts-before', reverseIndex.toString());
+            });
+        }
+
+        function removeToast(id) {
+            const toastIndex = toasts.findIndex(t => t.id === id);
+            if (toastIndex === -1) return;
+
+            const toast = toasts[toastIndex].element;
+            toast.setAttribute('data-removed', 'true');
+            
+            toasts.splice(toastIndex, 1);
+            updateToastPositions();
+            
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.parentNode.removeChild(toast);
+                }
+            }, 500);
+        }
+
+        // Generate Belle Method style notifications
+        function createPurchaseNotification() {
+            const products = ['Nemesis'];
+            const locations = ['Auckland, New Zealand 🇳🇿', 'London, UK 🇬🇧', 'Tokyo, Japan 🇯🇵', 'Sydney, Australia 🇦🇺', 'Berlin, Germany 🇩🇪', 'Toronto, Canada 🇨🇦'];
+            
+            const randomProduct = products[Math.floor(Math.random() * products.length)];
+            const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+            
+            const currentTime = new Date();
+            const timeStr = currentTime.toLocaleTimeString('en-US', {
+                hour: 'numeric',
+                minute: '2-digit', 
+                hour12: true
+            });
+            
+            // Use the exact Belle Method toast function with custom options
+            const id = ++toastId;
+            const toastEl = createToast(id, 'Someone purchased', 'success', {
+                product: randomProduct,
+                time: `today at ${timeStr}`,
+                location: randomLocation,
+                duration: 4000
+            });
+            
+            // Set initial position completely off-screen to the left
+            toastEl.style.transform = 'translateX(-120%)';
+            toastEl.style.transition = 'transform 0.5s ease-in-out';
+            
+            container.appendChild(toastEl);
+            toasts.push({ id, element: toastEl });
+            
+            updateToastPositions();
+            
+            // Slide in animation
+            setTimeout(() => {
+                toastEl.setAttribute('data-mounted', 'true');
+                toastEl.setAttribute('data-visible', 'true');
+                toastEl.setAttribute('data-expanded', 'true');
+                toastEl.style.transform = 'translateX(0)';
+            }, 10);
+            
+            // Slide out animation before removal
+            setTimeout(() => {
+                toastEl.style.transform = 'translateX(-120%)';
+                setTimeout(() => removeToast(id), 500);
+            }, 3500);
+        }
+
+        // Auto notifications every 8 seconds to 1 minute
+        function scheduleNextNotification() {
+            const randomDelay = Math.floor(Math.random() * 52000) + 8000; // 8-60 seconds
+            
+            setTimeout(() => {
+                createPurchaseNotification();
+                scheduleNextNotification();
+            }, randomDelay);
+        }
+
+        // Start notifications after page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                createPurchaseNotification();
+                scheduleNextNotification();
+            }, 3000); // Wait 3 seconds after page load
+        });
+    </script>
 </body>
 </html>
