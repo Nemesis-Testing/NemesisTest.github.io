@@ -368,10 +368,14 @@ class DiscordReviews {
         this.serverId = '1424944847604678668';
         this.channelId = '1424944848187953174';
         this.reviews = [];
-        this.apiUrl = 'http://localhost:3000/api/reviews';
+        // Use dynamic configuration
+        this.apiUrl = window.siteConfig.apiUrl + '/api/reviews';
+        this.healthUrl = window.siteConfig.apiUrl + '/health';
         this.currentOffset = 0;
         this.hasMore = true;
         this.isLoading = false;
+        
+        console.log('Discord Reviews initialized with API URL:', this.apiUrl);
     }
 
     async fetchReviews(loadMore = false) {
@@ -617,7 +621,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Test API connection first
         console.log('Testing API connection...');
-        fetch('http://localhost:3000/health')
+        fetch(discordReviews.healthUrl)
             .then(response => {
                 console.log('Health check response:', response.status);
                 return response.json();
