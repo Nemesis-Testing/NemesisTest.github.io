@@ -266,7 +266,7 @@
                 </div>
                 
                 <div class="stat-item">
-                    <div class="stat-number">5100+</div>
+                    <div class="stat-number">50+</div>
                     <div class="stat-label">Options</div>
                     <div class="stat-description">To get the most out of nemesis.</div>
                 </div>
@@ -397,31 +397,22 @@
             toastEl.style.minHeight = '105px';
             toastEl.style.height = '105px';
 
+            // Custom notification style to match nemesis site theme
+            // Use a dark background, site accent color, and logo
+            const accent = '#7f5cff'; // Example accent color, adjust to your brand
+            const logo = 'assets/logo.svg'; // Use your logo
             const description = options.description || '';
-            
-            // EXACT BELLE METHOD LAYOUT - STOLEN 1:1 WITH SRCSET (PROPERLY FORMATTED)
             toastEl.innerHTML = `
-                <div class="flex h-full w-full flex-row justify-between gap-1">
-                    <div class="p-4">
-                        <span class="text-muted-foreground/70 line-clamp-1 whitespace-pre-wrap text-xs">${title}</span>
-                        <span class="line-clamp-2 max-w-full overflow-ellipsis text-sm font-semibold text-white">${options.product || 'AIM'}</span>
-                        <span class="first-letter-capitalize text-muted-foreground/70 line-clamp-1 whitespace-pre-wrap text-xs">${options.time || 'today at 1:09 AM'}</span>
-                        <div class="mt-2 inline-flex items-center">
-                            <div class="!text-muted-foreground line-clamp-1 capitalize">
-                                <span class="mr-1 !lowercase">from</span>${options.location || 'Auckland, New Zealand 🇳🇿'}
-                            </div>
+                <div style="display: flex; align-items: center; height: 100%; width: 100%; background: #18181b; border-radius: 10px; box-shadow: 0 4px 24px #000a; border: 1.5px solid ${accent};">
+                    <div style="padding: 18px 18px 18px 18px; display: flex; flex-direction: column; flex: 1;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <img src="${logo}" alt="nemesis logo" style="height: 32px; width: 32px; border-radius: 6px; background: #232136;">
+                            <span style="font-weight: 700; color: ${accent}; font-size: 1.1rem; letter-spacing: 1px;">nemesis</span>
                         </div>
-                    </div>
-                    <div class="relative h-full w-40" style="height: 105px; width: 180px; overflow: hidden; border-radius: 8px;">
-                        <img alt="Coin" 
-                             loading="lazy" 
-                             decoding="async" 
-                             data-nimg="fill" 
-                             class="gradient-mask-l-70" 
-                             sizes="100vw" 
-                             srcset="https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 640w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 750w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 828w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 1080w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 1200w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 1920w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 2048w, https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter 3840w" 
-                             src="https://tr.rbxcdn.com/180DAY-3157f3cd45c48daae450922164c8d7d2/768/432/Image/Webp/noFilter" 
-                             style="position: absolute; height: 110%; width: 110%; top: -8px; right: -10px; color: transparent; object-fit: fill;">
+                        <span style="margin-top: 8px; color: #fff; font-size: 1rem; font-weight: 600;">${title}</span>
+                        <span style="color: #a1a1aa; font-size: 0.95rem; margin-top: 2px;">${options.product || 'Roblox External'}</span>
+                        <span style="color: #7c7c8a; font-size: 0.85rem; margin-top: 2px;">${options.time || 'just now'}</span>
+                        <span style="color: #7f5cff; font-size: 0.85rem; margin-top: 2px;">${options.location || 'Worldwide'}</span>
                     </div>
                 </div>
             `;
@@ -527,6 +518,3 @@
     </script>
 </body>
 </html>
-
-
-
