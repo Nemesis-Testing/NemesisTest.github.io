@@ -340,7 +340,8 @@
     <script>
     async function updateConfigCount() {
         try {
-            const res = await fetch('/api/configs');
+            // Replace with your actual Render backend URL
+            const res = await fetch('https://nemesis-backend-yv3w.onrender.com/api/configs');
             const data = await res.json();
             const el = document.getElementById('config-count');
             if (el && typeof data.count === 'number') {
