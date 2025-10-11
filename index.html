@@ -269,9 +269,9 @@
                 </div>
                 
                 <div class="stat-item">
-                    <div class="stat-number">100K+</div>
-                    <div class="stat-label">Lines of Code</div>
-                    <div class="stat-description">Thanks to our development team.</div>
+                    <div class="stat-number" id="member-count">0</div>
+                    <div class="stat-label">Members</div>
+                    <div class="stat-description">In our Discord server.</div>
                 </div>
             </div>
         </div>
@@ -337,10 +337,10 @@
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
 
+
     <script>
     async function updateConfigCount() {
         try {
-            // Replace with your actual Render backend URL
             const res = await fetch('https://nemesis-backend-yv3w.onrender.com/api/configs');
             const data = await res.json();
             const el = document.getElementById('config-count');
@@ -351,9 +351,24 @@
             // fallback: show "0" or keep previous
         }
     }
-    document.addEventListener('DOMContentLoaded', updateConfigCount);
-    // Optionally, refresh every 30 seconds for live updates
+    async function updateMemberCount() {
+        try {
+            const res = await fetch('https://nemesis-backend-yv3w.onrender.com/api/members');
+            const data = await res.json();
+            const el = document.getElementById('member-count');
+            if (el && typeof data.count === 'number') {
+                el.textContent = data.count.toLocaleString();
+            }
+        } catch (e) {
+            // fallback: show "0" or keep previous
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        updateConfigCount();
+        updateMemberCount();
+    });
     setInterval(updateConfigCount, 30000);
+    setInterval(updateMemberCount, 30000);
     </script>
 
     
