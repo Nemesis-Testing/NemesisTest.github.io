@@ -257,7 +257,7 @@
                 </div>
                 
                 <div class="stat-item">
-                    <div class="stat-number">100+</div>
+                    <div class="stat-number" id="config-count">0</div>
                     <div class="stat-label">Configs</div>
                     <div class="stat-description">You will definitely find what you need.</div>
                 </div>
@@ -336,6 +336,24 @@
 
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+    async function updateConfigCount() {
+        try {
+            const res = await fetch('/api/configs');
+            const data = await res.json();
+            const el = document.getElementById('config-count');
+            if (el && typeof data.count === 'number') {
+                el.textContent = data.count;
+            }
+        } catch (e) {
+            // fallback: show "0" or keep previous
+        }
+    }
+    document.addEventListener('DOMContentLoaded', updateConfigCount);
+    // Optionally, refresh every 30 seconds for live updates
+    setInterval(updateConfigCount, 30000);
+    </script>
 
     
     <script>
