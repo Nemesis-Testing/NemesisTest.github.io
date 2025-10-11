@@ -342,12 +342,10 @@
 
     <!-- BELLE METHOD NOTIFICATION SYSTEM JAVASCRIPT -->
     <script>
-        // PURE BELLE METHOD TOAST IMPLEMENTATION - STOLEN FROM SOURCE
         let toastId = 0;
         const toasts = [];
         const container = document.querySelector('[data-sonner-toaster]');
 
-        // Belle Method's exact toast object
         const toast = {
             success: (title, options) => showToast(title, 'success', options),
             error: (title, options) => showToast(title, 'error', options),
@@ -355,7 +353,6 @@
             warning: (title, options) => showToast(title, 'warning', options)
         };
 
-        // Make global like Belle Method
         window.toast = toast;
 
         function showToast(title, type = 'success', options = {}) {
@@ -397,10 +394,8 @@
             toastEl.style.minHeight = '105px';
             toastEl.style.height = '105px';
 
-            // Custom notification style to match nemesis site theme
-            // Use a dark background, site accent color, and logo
-            const accent = '#7f5cff'; // Example accent color, adjust to your brand
-            const logo = 'assets/logo.svg'; // Use your logo
+            const accent = '#7f5cff';
+            const logo = 'assets/logo.svg';
             const description = options.description || '';
             toastEl.innerHTML = `
                 <div style="display: flex; align-items: center; height: 100%; width: 100%; background: #18181b; border-radius: 10px; box-shadow: 0 4px 24px #000a; border: 1.5px solid ${accent};">
